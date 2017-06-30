@@ -1,0 +1,21 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="navigateToEditProfilePage()">Edit</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <profile-view (existingProfile)="getExistingProfile($event)"></profile-view>
+</ion-content>
