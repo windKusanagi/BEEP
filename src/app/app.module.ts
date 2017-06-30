@@ -12,6 +12,9 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FormsModule } from "@angular/forms";
+import { ChatService } from '../providers/chat/chat.service';
+
+
 
 
 
@@ -38,7 +41,8 @@ import { FormsModule } from "@angular/forms";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
     AuthService,
-    DataService
+    DataService,
+    ChatService
   ]
 })
 export class AppModule {}

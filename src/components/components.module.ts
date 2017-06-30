@@ -1,3 +1,5 @@
+import { ChatMessageComponent } from './chat-message/chat-message';
+import { SendMessageBoxComponent } from './send-message-box/send-message-box';
 import { ProfileSearchComponent } from './profile-search/profile-search';
 import { ProfileViewComponent } from './profile-view/profile-view';
 import { EditProfileFormComponent } from './edit-profile-form/edit-profile-form';
@@ -13,7 +15,9 @@ import { NgModule } from '@angular/core';
             RegisterFormComponent,
             EditProfileFormComponent,
             ProfileViewComponent,
-            ProfileSearchComponent
+            ProfileSearchComponent,
+            SendMessageBoxComponent,
+            ChatMessageComponent
         ],
     imports: [IonicModule],
     exports: [
@@ -21,7 +25,9 @@ import { NgModule } from '@angular/core';
             RegisterFormComponent,
             EditProfileFormComponent,
             ProfileViewComponent,
-            ProfileSearchComponent
+            ProfileSearchComponent,
+            SendMessageBoxComponent,
+            ChatMessageComponent
         ]
 })
 

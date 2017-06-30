@@ -20,20 +20,27 @@ export class ProfileViewComponent implements OnInit{
 
   private loader: Loading;
 
-  private authUser: User;
+  //private authUser: User;
 
 
   @Output() existingProfile: EventEmitter<Profile>;
 
   ngOnInit(): void{
     this.loader.present();
-    this.auth.getAuthenticatedUser().subscribe((user: User) => {
-      this.data.getProfile(user).subscribe((profile)=> {
-        this.userProfile = <Profile>profile.val();
-        this.existingProfile.emit(this.userProfile);
-        this.loader.dismiss()
-      })
+
+    this.data.getAuthenticatedUserProfile().subscribe(profile => {
+      this.userProfile = profile;
+      this.existingProfile.emit(this.userProfile);
+      this.loader.dismiss();
     })
+
+    // this.auth.getAuthenticatedUser().subscribe((user: User) => {
+    //   this.data.getProfile(user).subscribe((profile)=> {
+    //     this.userProfile = <Profile>profile.val();
+    //     //this.existingProfile.emit(this.userProfile);
+    //     //this.loader.dismiss()
+    //   })
+    // })
   }
 
   constructor(private data: DataService, private auth: AuthService, private loading: LoadingController) {
