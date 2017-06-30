@@ -1,4 +1,4 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is an ionic online chat app, using Google firebase service including authentication, database, message pushing, etc. 
 
 ## How to use this template
 
