@@ -1,8 +1,10 @@
+import { DataService } from './../../providers/data/data.service';
 import { AuthService } from './../../providers/auth/auth.service';
 import { Profile } from './../../models/profile/profile.interface';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { database } from 'firebase/app';
+//
 /**
  * Generated class for the ProfilePage page.
  *
@@ -29,6 +31,19 @@ export class ProfilePage {
     this.navCtrl.push('EditProfilePage', { existingProfile: this.existingProfile })
   }
   signout(){
+    // this.data.getAuthenticatedUserProfile().subscribe(profile => {
+    //   console.log(profile)
+    // //     const ref = database().ref('online-users/'+profile.$key)
+    // //     // try{
+    // //     //   //ref.remove();
+    // //     //   //database().goOffline();
+    // //     //   ref.onDisconnect().remove();
+    // //     // }
+    // //     // catch(e){
+    // //     //   console.error(e);
+    // //     // }
+    // //     console.log(ref)
+    //  });
     this.auth.signOut();
     this.navCtrl.setRoot('LoginPage');
   }

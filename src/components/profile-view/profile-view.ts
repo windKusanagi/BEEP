@@ -29,6 +29,7 @@ export class ProfileViewComponent implements OnInit{
     this.loader.present();
 
     this.data.getAuthenticatedUserProfile().subscribe(profile => {
+      //console.log(profile);
       this.userProfile = profile;
       this.existingProfile.emit(this.userProfile);
       this.loader.dismiss();

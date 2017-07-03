@@ -2,7 +2,7 @@ import { AuthService } from './../auth/auth.service';
 import { Profile } from './../../models/profile/profile.interface';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2/database'
-import { User } from 'firebase/app';
+import { User, database } from 'firebase/app';
 import "rxjs/add/operator/take";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/mergeMap";
@@ -60,6 +60,26 @@ export class DataService {
       console.error(e);
       return false;
     }
+  }
+
+  setUserOnline(profile: Profile){
+    const ref = database().ref('online-users/'+profile.$key)
+    //const ref1 = database().ref('online-users/')
+    try{
+      ref.update({ ...profile });
+      //ref1.child(profile.$key).remove();
+      //ref.remove();
+      ref.onDisconnect().remove();
+      //database().goOffline();
+    }
+    catch(e){
+      console.error(e);
+    }
+
+  }
+
+  getOnlineUsers(): FirebaseListObservable<Profile[]> {
+    return this.database.list('online-users');
   }
 
 }

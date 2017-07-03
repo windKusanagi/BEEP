@@ -1,0 +1,11 @@
+<!-- Generated template for the LastMessageListComponent component -->
+<ion-list>
+    <ion-item-divider>Last Messages</ion-item-divider>
+    <ion-item *ngFor="let message of messageList$ | async" (click)="navigateToMessage(message)">
+        <ion-avatar item-left>
+            <img src="assets/img/avatar.png" alt="Avatar">
+        </ion-avatar>
+        <h2>{{message?.userToProfile?.firstName}} {{message?.userToProfile?.lastName}}</h2>
+        <h3>{{message?.content}}</h3>
+    </ion-item>
+</ion-list>

@@ -1,3 +1,5 @@
+import { LastMessageListComponent } from './last-message-list/last-message-list';
+import { OnlineUsersComponent } from './online-users/online-users';
 import { ChatMessageComponent } from './chat-message/chat-message';
 import { SendMessageBoxComponent } from './send-message-box/send-message-box';
 import { ProfileSearchComponent } from './profile-search/profile-search';
@@ -17,7 +19,9 @@ import { NgModule } from '@angular/core';
             ProfileViewComponent,
             ProfileSearchComponent,
             SendMessageBoxComponent,
-            ChatMessageComponent
+            ChatMessageComponent,
+            OnlineUsersComponent,
+            LastMessageListComponent
         ],
     imports: [IonicModule],
     exports: [
@@ -27,7 +31,9 @@ import { NgModule } from '@angular/core';
             ProfileViewComponent,
             ProfileSearchComponent,
             SendMessageBoxComponent,
-            ChatMessageComponent
+            ChatMessageComponent,
+            OnlineUsersComponent,
+            LastMessageListComponent
         ]
 })
 

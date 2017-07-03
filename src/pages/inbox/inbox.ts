@@ -22,7 +22,7 @@ export class InboxPage {
   }
 
   ionViewDidLoad() {
-    console.log(this.messageList);
+    //console.log(this.messageList);
   }
 
   navigateToSearchUserPage() {
