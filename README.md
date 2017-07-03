@@ -1,4 +1,4 @@
-This is an ionic online chat app, using Google firebase service including authentication, database, message pushing, etc. 
+This is an ionic online chat app, using Google firebase service including authentication, database, cloud functions, etc. 
 
 ## How to use this template
 
