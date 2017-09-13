@@ -1,5 +1,4 @@
-This is an ionic online chat app, using Google firebase service including authentication, database, cloud functions, etc. 
-
+A small hybrid Ionic online chat app. Requiring registration and authentication. Displaying real-time chat history and online user list. Technologies involved: Ionic 3 (Angular 4 and Cordova), RxJS, firebase authentication, firebase real-time database, etc.
 ## How to use this template
 
 *This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
